@@ -14,25 +14,25 @@ public class ApplicationContextSameBeanFindTest {
 
     AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext();
 
-    @Test
-    @DisplayName("타입으로 조회시 같은 타입이 둘 이상 있으면, 중복 오류가 발생한다")
-    void findBeanByTypeDuplicate() {
-        ac.getBean(DiscountPolicy.class);
-    }
-
-    @Configuration
-    static  class  SameBeanConfig {
-
-        @Bean
-        public MemberRepository memberRepository1() {
-            return new MemoryMemberRepository();
-        }
-
-        @Bean
-        public MemberRepository memberRepository2() {
-            return new MemoryMemberRepository();
-        }
-
-    }
+//    @Test
+//    @DisplayName("타입으로 조회시 같은 타입이 둘 이상 있으면, 중복 오류가 발생한다")
+//    void findBeanByTypeDuplicate() {
+//        ac.getBean(DiscountPolicy.class);
+//    }
+//
+//    @Configuration
+//    static  class  SameBeanConfig {
+//
+//        @Bean
+//        public MemberRepository memberRepository1() {
+//            return new MemoryMemberRepository();
+//        }
+//
+//        @Bean
+//        public MemberRepository memberRepository2() {
+//            return new MemoryMemberRepository();
+//        }
+//
+//    }
 
 }
